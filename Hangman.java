@@ -44,11 +44,9 @@ public class Hangman extends ConsoleProgram {
 	    	}
     	}
     	if (!victory) {
-    		println("")
+    		println("You're completely hung.\nThe word was: " + str + "\nYou lose.");
     	}
 	}
-    
-    
     
     private char readChar(String display) {
 		String input = readLine(display);
