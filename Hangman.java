@@ -28,7 +28,7 @@ public class Hangman extends ConsoleProgram {
 	    	}
 	    	println("The word now looks like this: " + display);
 	    	println("You have " + remGuess + " guess left.");
-	    	char guess = readChar("Your guess: ");
+	    	char guess = readLetter("Your guess: ");
 	    	boolean correct = false;
 	    	for (int i = 0; i < str.length(); i++) {
 	    		if (guess == str.charAt(i)) {
@@ -52,6 +52,14 @@ public class Hangman extends ConsoleProgram {
     		println("You guessed the word: " + str + "\nYou win.");
     	}
 	}
+    
+    private char readLetter(String display) {
+    	char ch = '!'
+    	while (!isLetter(ch)) {
+    		println
+    		ch = readChar
+    	}
+    }
     
     private char readChar(String display) {
 		String input = readLine(display);
