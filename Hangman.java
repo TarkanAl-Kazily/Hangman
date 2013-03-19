@@ -54,7 +54,7 @@ public class Hangman extends ConsoleProgram {
 	}
     
     private char readLetter(String display) {
-    	char ch = '!'
+    	char ch = '!';
     	while (!isLetter(ch)) {
     		ch = readChar(display);
     		if (isLetter(ch)) {
