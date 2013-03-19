@@ -65,6 +65,7 @@ public class Hangman extends ConsoleProgram {
     	if (!isCapital(ch)) {
     		ch += (int) ('A' - 'a');
     	}
+    	return ch;
     }
     
     private char readChar(String display) {
