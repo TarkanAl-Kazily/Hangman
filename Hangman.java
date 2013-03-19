@@ -29,6 +29,7 @@ public class Hangman extends ConsoleProgram {
 	    	println("You have " + remGuess + " guess left.");
 	    	char guess = readLetter("Your guess: ");
 	    	boolean correct = false;
+	    	display = "";
 	    	for (int i = 0; i < str.length(); i++) {
 	    		if (guess == str.charAt(i)) {
 	    			display += guess;
