@@ -82,7 +82,10 @@ public class Hangman extends ConsoleProgram {
 	}
     
     private String createDisplay() {
-    	
+    	display = "";
+    	for (int i = 0; i < wordLength; i++) {
+    		
+    	}
     }
     
     private boolean victory = false;
