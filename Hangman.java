@@ -16,26 +16,19 @@ public class Hangman extends ConsoleProgram {
 	private static final int BODY_PARTS = 8;
 	
     public void run() {
-    	for (int i = 0; i < str.length(); i++) {
-    		display += "-";
-    	}
     	println("Welcome to Hangman!");
     	while (remGuess > 0){
-	    	if (display.equals(str)) {
-	    		victory = true;
-	    		break;
-	    	}
-	    	println("The word now looks like this: " + display);
+	    	println("The word now looks like this: " + );
 	    	println("You have " + remGuess + " guess left.");
 	    	char guess = readLetter("Your guess: ");
 	    	boolean correct = false;
 	    	//Use array to store chars that have been successfully guessed, and dashes in places that havent.
 	    	for (int i = 0; i < str.length(); i++) {
 	    		if (guess == str.charAt(i)) {
-	    			display += guess;
+	    			
 	    			correct = true;
 	    		} else {
-	    			display += "-";
+	    			
 	    		}
 	    	}
 	    	if (correct) {
@@ -91,6 +84,6 @@ public class Hangman extends ConsoleProgram {
     private int remGuess = BODY_PARTS;
     private int index = (int) (Math.random() * HangmanLexicon.getWordCount());
     private String str = HangmanLexicon.getWord(index);
-	private String display = "";
+	private String[] currentStr;
     
 }
