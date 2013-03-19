@@ -36,13 +36,13 @@ public class Hangman extends ConsoleProgram {
 	    			currentStr[i] = guess;
 	    			correct = true;
 	    		}
-	    	if (correct) {
+	    	}
+    		if (correct) {
 	    		println("That guess is correct.");
 	    	} else {
 	    		remGuess--;
 	    		println("There are no " + guess + "'s in the word.");
 	    		}
-	    	}
 	    }
 		if (!victory) {
 			println("You're completely hung.\nThe word was: " + str + "\nYou lose.");
