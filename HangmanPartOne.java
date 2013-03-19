@@ -119,6 +119,6 @@ public class HangmanPartOne extends ConsoleProgram {
     private int wordLength = str.length();
 	private char[] currentStr = new char[wordLength];
 	private String display;
-	private java.util.List<Character> guessed = new ArrayList<Character>();
+	private ArrayList<Character> guessed = new ArrayList<Character>();
     
 }
