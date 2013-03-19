@@ -16,6 +16,7 @@ public class Hangman extends ConsoleProgram {
 	private static final int BODY_PARTS = 8;
 	
     public void run() {
+    	boolean 
     	for (int i = 0; i < str.length(); i++) {
     		display += "_";
     	}
@@ -35,9 +36,16 @@ public class Hangman extends ConsoleProgram {
 	    	}
 	    	if (!correct) {
 	    		remGuess--;
+	    		println("")
+	    	}
+	    	if (display.equals(str)) {
+	    		victory = true;
+	    		break;
 	    	}
     	}
-    	
+    	if (!victory) {
+    		println("")
+    	}
 	}
     
     
@@ -51,9 +59,21 @@ public class Hangman extends ConsoleProgram {
 		return input.charAt(0);
 	}
     
-    int remGuess = BODY_PARTS;
-    int index = (int) (Math.random() * HangmanLexicon.getWordCount());
-    String str = HangmanLexicon.getWord(index);
-	String display = "";
+    private boolean isLetter(char ch) {
+		if (((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z'))) return true;
+		else return false;
+	}
+    
+    private boolean isCapital(char ch) {
+		if ((ch >= 'A') && (ch <= 'Z')) return true;
+		else return false;
+		}
+	}
+    
+    private boolean victory = false;
+    private int remGuess = BODY_PARTS;
+    private int index = (int) (Math.random() * HangmanLexicon.getWordCount());
+    private String str = HangmanLexicon.getWord(index);
+	private String display = "";
     
 }
