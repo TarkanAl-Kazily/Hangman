@@ -12,7 +12,9 @@ import acm.util.*;
 import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
-
+	
+	private static final int BODY_PARTS = 8;
+	
     public void run() {
     	int index = (int) (Math.random() * HangmanLexicon.getWordCount());
     	String str = HangmanLexicon.getWord(index);
