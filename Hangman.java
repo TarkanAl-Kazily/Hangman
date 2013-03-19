@@ -20,6 +20,10 @@ public class Hangman extends ConsoleProgram {
     		display += "_";
     	}
     	println("Welcome to Hangman!");
+    	println("The word now looks like this: " + display);
+    	println("You have " + remGuess + " left.");
+    	char guess = readChar("Your guess: ");
+    	
     	
 	}
     
@@ -34,8 +38,9 @@ public class Hangman extends ConsoleProgram {
 		return input.charAt(0);
 	}
     
+    int remGuess = BODY_PARTS;
     int index = (int) (Math.random() * HangmanLexicon.getWordCount());
-	String str = HangmanLexicon.getWord(index);
+    String str = HangmanLexicon.getWord(index);
 	String display = "";
     
 }
