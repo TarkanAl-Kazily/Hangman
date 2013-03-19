@@ -66,7 +66,7 @@ public class Hangman extends ConsoleProgram {
 	    		}
 	    	}
     	}
-    	
+    	guessed[guessed.length - 1] = guess;
     	return guess;
     }
     
@@ -119,6 +119,6 @@ public class Hangman extends ConsoleProgram {
     private int wordLength = str.length();
 	private char[] currentStr = new char[wordLength];
 	private String display;
-	private char[] guessed = new char[1];
+	private ArrayList<char> guessed = new ArrayList();
     
 }
