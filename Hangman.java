@@ -84,7 +84,6 @@ public class Hangman extends ConsoleProgram {
     private boolean isCapital(char ch) {
 		if ((ch >= 'A') && (ch <= 'Z')) return true;
 		else return false;
-		}
 	}
     
     private boolean victory = false;
