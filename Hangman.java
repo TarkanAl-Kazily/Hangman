@@ -81,10 +81,10 @@ public class Hangman extends ConsoleProgram {
 		else return false;
 	}
     
-    private String createDisplay() {
+    private String createDisplay(char[] arr) {
     	display = "";
     	for (int i = 0; i < wordLength; i++) {
-    		display += currentStr[i];
+    		display += arr[i];
     	}
     	return display;
     }
