@@ -58,7 +58,7 @@ public class Hangman extends ConsoleProgram {
     	while (!legitimateGuess) {
 	    	guess = readLetter("Your guess: ");
 	    	legitimateGuess = true;
-	    	for (char letter : currentStr) {
+	    	for (char letter : guessed) {
 	    		if (letter == guess) {
 	    			println("You have already guessed that letter.");
 	    			legitimateGuess = false;
@@ -66,6 +66,7 @@ public class Hangman extends ConsoleProgram {
 	    		}
 	    	}
     	}
+    	
     	return guess;
     }
     
@@ -118,6 +119,6 @@ public class Hangman extends ConsoleProgram {
     private int wordLength = str.length();
 	private char[] currentStr = new char[wordLength];
 	private String display;
-	private char[] guessed = new char[26];
+	private char[] guessed = new char[1];
     
 }
