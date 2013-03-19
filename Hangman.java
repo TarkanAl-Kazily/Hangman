@@ -42,7 +42,7 @@ public class Hangman extends ConsoleProgram {
 	    		println("That guess is correct.");
 	    	} else {
 	    		remGuess--;
-	    		println("There are no " + char + "'s in the word.")
+	    		println("There are no " + char + "'s in the word.");
 	    	}
 	    	
     	}
