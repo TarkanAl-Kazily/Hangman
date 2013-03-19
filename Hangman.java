@@ -18,6 +18,7 @@ public class Hangman extends ConsoleProgram {
     public void run() {
     	boolean correct;
     	boolean legitimateGuess;
+    	char guess;
     	for (int i = 0; i < wordLength; i++) {
     		currentStr[i] = '-';
     	}  	
@@ -31,7 +32,7 @@ public class Hangman extends ConsoleProgram {
 	    	println("The word now looks like this: " + display);
 	    	println("You have " + remGuess + " guess left.");
 	    	while (!legitimateGuess) {
-		    	char guess = readLetter("Your guess: ");
+		    	guess = readLetter("Your guess: ");
 		    	for (char letter : currentStr) {
 		    		if (letter == guess) {
 		    			println
