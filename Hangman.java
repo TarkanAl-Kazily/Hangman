@@ -26,26 +26,24 @@ public class Hangman extends ConsoleProgram {
 	    	println("You have " + remGuess + " guess left.");
 	    	char guess = readLetter("Your guess: ");
 	    	boolean correct = false;
-	    	//Use array to store chars that have been successfully guessed, and dashes in places that havent.
 	    	for (int i = 0; i < wordLength; i++) {
 	    		if (guess == str.charAt(i)) {
 	    			currentStr[i] = guess;
 	    			correct = true;
-	    	}
+	    		}
 	    	if (correct) {
 	    		println("That guess is correct.");
-	    	} else {
+	    		} else {
 	    		remGuess--;
 	    		println("There are no " + guess + "'s in the word.");
+	    		}
 	    	}
-	    	
-    	}
-	    	if (!victory) {
-	    		println("You're completely hung.\nThe word was: " + str + "\nYou lose.");
-	    	} else {
-	    		println("You guessed the word: " + str + "\nYou win.");
-	    	}
-    	}
+	    }
+		if (!victory) {
+			println("You're completely hung.\nThe word was: " + str + "\nYou lose.");
+		} else {
+			println("You guessed the word: " + str + "\nYou win.");
+		}
 	}
     
     private char readLetter(String display) {
