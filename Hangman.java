@@ -87,6 +87,7 @@ public class Hangman extends ConsoleProgram {
     private int remGuess = BODY_PARTS;
     private int index = (int) (Math.random() * HangmanLexicon.getWordCount());
     private String str = HangmanLexicon.getWord(index);
-	private String[] currentStr = new String[str.length()];
+    private int wordLength = str.length();
+	private String[] currentStr = new String[wordLength];
     
 }
