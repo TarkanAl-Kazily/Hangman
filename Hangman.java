@@ -84,7 +84,7 @@ public class Hangman extends ConsoleProgram {
     private String createDisplay() {
     	display = "";
     	for (int i = 0; i < wordLength; i++) {
-    		
+    		display += currentStr[i];
     	}
     }
     
