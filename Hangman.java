@@ -33,7 +33,7 @@ public class Hangman extends ConsoleProgram {
 	    		}
 	    	if (correct) {
 	    		println("That guess is correct.");
-	    		} else {
+	    	} else {
 	    		remGuess--;
 	    		println("There are no " + guess + "'s in the word.");
 	    		}
