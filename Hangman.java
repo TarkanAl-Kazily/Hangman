@@ -22,6 +22,11 @@ public class Hangman extends ConsoleProgram {
     	println("Welcome to Hangman!");
     	while (remGuess > 0){
     		display = createDisplay(currentStr);
+    		if (display.equals(str)) {
+    			victory = true;
+    			
+    		}
+    		
 	    	println("The word now looks like this: " + display);
 	    	println("You have " + remGuess + " guess left.");
 	    	char guess = readLetter("Your guess: ");
