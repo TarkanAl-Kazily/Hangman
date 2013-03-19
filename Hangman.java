@@ -53,7 +53,7 @@ public class Hangman extends ConsoleProgram {
 	}
     
     private char createGuess() {
-    	char guess = '';
+    	char guess = ' ';
     	boolean legitimateGuess = false;
     	while (!legitimateGuess) {
 	    	guess = readLetter("Your guess: ");
