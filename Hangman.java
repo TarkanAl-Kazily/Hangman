@@ -20,7 +20,7 @@ public class Hangman extends ConsoleProgram {
     		display += "_";
     	}
     	println("Welcome to Hangman!");
-    	while (remGuess < 0){
+    	while (remGuess > 0){
 	    	if (display.equals(str)) {
 	    		victory = true;
 	    		break;
