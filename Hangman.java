@@ -17,9 +17,7 @@ public class Hangman extends ConsoleProgram {
 	
     public void run() {
     	boolean correct;
-    	boolean legitimateGuess;
-    	char guess ='';
-    	
+    	char guess;
     	for (int i = 0; i < wordLength; i++) {
     		currentStr[i] = '-';
     	}  	
