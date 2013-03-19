@@ -24,7 +24,7 @@ public class Hangman extends ConsoleProgram {
     		display = createDisplay(currentStr);
     		if (display.equals(str)) {
     			victory = true;
-    			
+    			break;
     		}
     		
 	    	println("The word now looks like this: " + display);
