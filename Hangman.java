@@ -16,6 +16,9 @@ public class Hangman extends ConsoleProgram {
 	private static final int BODY_PARTS = 8;
 	
     public void run() {
+    	for (int i = 0; i < currentStr.length; i++) {
+    		currentStr[i] = "-";
+    	}  	
     	println("Welcome to Hangman!");
     	while (remGuess > 0){
 	    	println("The word now looks like this: " + );
