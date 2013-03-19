@@ -20,10 +20,14 @@ public class Hangman extends ConsoleProgram {
     		display += "_";
     	}
     	println("Welcome to Hangman!");
-    	println("The word now looks like this: " + display);
-    	println("You have " + remGuess + " left.");
-    	char guess = readChar("Your guess: ");
-    	
+    	while (remGuess < 0){
+	    	println("The word now looks like this: " + display);
+	    	println("You have " + remGuess + " left.");
+	    	char guess = readChar("Your guess: ");
+	    	for (int i = 0; i < str; i++) {
+	    		
+	    	}
+    	}
     	
 	}
     
