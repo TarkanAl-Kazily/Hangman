@@ -58,8 +58,9 @@ public class Hangman extends ConsoleProgram {
     	while (!isLetter(ch)) {
     		ch = readChar(display);
     		if (isLetter(ch)) {
-    			
+    			break;
     		}
+    		println("That is not a letter.");
     	}
     }
     
