@@ -30,9 +30,6 @@ public class Hangman extends ConsoleProgram {
 	    		if (guess == str.charAt(i)) {
 	    			currentStr[i] = guess;
 	    			correct = true;
-	    		} else {
-	    			
-	    		}
 	    	}
 	    	if (correct) {
 	    		println("That guess is correct.");
