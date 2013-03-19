@@ -65,6 +65,10 @@ public class Hangman extends ConsoleProgram {
 		}
 	}
     
+    private char createGuess() {
+    	
+    }
+    
     private char readLetter(String display) {
     	char ch = '!';
     	while (!isLetter(ch)) {
