@@ -24,8 +24,17 @@ public class Hangman extends ConsoleProgram {
 	    	println("The word now looks like this: " + display);
 	    	println("You have " + remGuess + " left.");
 	    	char guess = readChar("Your guess: ");
+	    	boolean correct = false;
 	    	for (int i = 0; i < str; i++) {
-	    		
+	    		if (guess == str.charAt(i)) {
+	    			display += guess;
+	    			correct = true;
+	    		} else {
+	    			display += "_";
+	    		}
+	    	}
+	    	if (!correct) {
+	    		remGuess--;
 	    	}
     	}
     	
