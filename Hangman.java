@@ -88,7 +88,7 @@ public class Hangman extends ConsoleProgram {
     private char readChar(String display) {
 		String input = readLine(display);
 		while (input.length() != 1) {
-			println("Error: Not a character");
+			println("That is not a character.");
 			input = readLine(display);
 		}
 		return input.charAt(0);
