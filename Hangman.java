@@ -8,7 +8,7 @@
 import acm.graphics.*;
 import acm.program.*;
 import acm.util.*;
-import java.util.List.*;
+import java.util.List;
 import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
@@ -119,6 +119,6 @@ public class Hangman extends ConsoleProgram {
     private int wordLength = str.length();
 	private char[] currentStr = new char[wordLength];
 	private String display;
-	private List<Character> guessed = new ArrayList<Character>();
+	private List<Character> guessed = new List<Character>();
     
 }
