@@ -16,8 +16,10 @@ public class Hangman extends ConsoleProgram {
 	private static final int BODY_PARTS = 8;
 	
     public void run() {
-    	int index = (int) (Math.random() * HangmanLexicon.getWordCount());
-    	String str = HangmanLexicon.getWord(index);
+    	for (int i = 0; i < str.length(); i++) {
+    		display += "_";
+    	}
+    	println("Welcome to Hangman!");
     	
 	}
     
@@ -31,5 +33,9 @@ public class Hangman extends ConsoleProgram {
 		}
 		return input.charAt(0);
 	}
+    
+    int index = (int) (Math.random() * HangmanLexicon.getWordCount());
+	String str = HangmanLexicon.getWord(index);
+	String display = "";
     
 }
