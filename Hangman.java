@@ -66,7 +66,7 @@ public class Hangman extends ConsoleProgram {
 	    		}
 	    	}
     	}
-    	guessed[guessed.length - 1] = guess;
+    	guessed.add(guess);
     	return guess;
     }
     
