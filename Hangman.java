@@ -8,7 +8,7 @@
 import acm.graphics.*;
 import acm.program.*;
 import acm.util.*;
-import java.util.*;
+import java.util.List;
 import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
