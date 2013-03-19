@@ -26,7 +26,6 @@ public class Hangman extends ConsoleProgram {
     			victory = true;
     			break;
     		}
-    		
 	    	println("The word now looks like this: " + display);
 	    	println("You have " + remGuess + " guess left.");
 	    	char guess = readLetter("Your guess: ");
