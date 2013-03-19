@@ -28,7 +28,7 @@ public class Hangman extends ConsoleProgram {
 	    	//Use array to store chars that have been successfully guessed, and dashes in places that havent.
 	    	for (int i = 0; i < wordLength; i++) {
 	    		if (guess == str.charAt(i)) {
-	    			currentStr[i] = (String) guess;
+	    			currentStr[i] = guess;
 	    			correct = true;
 	    		} else {
 	    			
@@ -88,6 +88,6 @@ public class Hangman extends ConsoleProgram {
     private int index = (int) (Math.random() * HangmanLexicon.getWordCount());
     private String str = HangmanLexicon.getWord(index);
     private int wordLength = str.length();
-	private String[] currentStr = new String[wordLength];
+	private char[] currentStr = new char[wordLength];
     
 }
