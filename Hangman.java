@@ -29,7 +29,7 @@ public class Hangman extends ConsoleProgram {
 	    	println("You have " + remGuess + " guess left.");
 	    	char guess = readLetter("Your guess: ");
 	    	boolean correct = false;
-	    	display = "";
+	    	//Use array to store chars that have been successfully guessed, and dashes in places that havent.
 	    	for (int i = 0; i < str.length(); i++) {
 	    		if (guess == str.charAt(i)) {
 	    			display += guess;
