@@ -11,7 +11,7 @@ import acm.util.*;
 
 import java.awt.*;
 
-public static final int BODY_PARTS = 8;
+private static final int BODY_PARTS = 8;
 
 public class Hangman extends ConsoleProgram {
 
