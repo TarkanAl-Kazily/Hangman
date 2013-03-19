@@ -31,11 +31,13 @@ public class Hangman extends ConsoleProgram {
     		}
 	    	println("The word now looks like this: " + display);
 	    	println("You have " + remGuess + " guess left.");
+	    	legitimateGuess = false;
 	    	while (!legitimateGuess) {
 		    	guess = readLetter("Your guess: ");
 		    	for (char letter : currentStr) {
 		    		if (letter == guess) {
 		    			println("You have already guessed that letter.");
+		    			
 		    			break;
 		    		}
 		    	}
