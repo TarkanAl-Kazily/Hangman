@@ -86,6 +86,7 @@ public class Hangman extends ConsoleProgram {
     	for (int i = 0; i < wordLength; i++) {
     		display += currentStr[i];
     	}
+    	return display;
     }
     
     private boolean victory = false;
