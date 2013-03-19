@@ -40,10 +40,11 @@ public class Hangman extends ConsoleProgram {
 	    	}
 	    	
     	}
-    	if (!victory) {
-    		println("You're completely hung.\nThe word was: " + str + "\nYou lose.");
-    	} else {
-    		println("You guessed the word: " + str + "\nYou win.");
+	    	if (!victory) {
+	    		println("You're completely hung.\nThe word was: " + str + "\nYou lose.");
+	    	} else {
+	    		println("You guessed the word: " + str + "\nYou win.");
+	    	}
     	}
 	}
     
