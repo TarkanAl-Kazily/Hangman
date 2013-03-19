@@ -21,6 +21,7 @@ public class Hangman extends ConsoleProgram {
     	}  	
     	println("Welcome to Hangman!");
     	while (remGuess > 0){
+    		createDisplay();
 	    	println("The word now looks like this: " + display);
 	    	println("You have " + remGuess + " guess left.");
 	    	char guess = readLetter("Your guess: ");
@@ -79,6 +80,10 @@ public class Hangman extends ConsoleProgram {
 		if ((ch >= 'A') && (ch <= 'Z')) return true;
 		else return false;
 	}
+    
+    private String createDisplay() {
+    	
+    }
     
     private boolean victory = false;
     private int remGuess = BODY_PARTS;
