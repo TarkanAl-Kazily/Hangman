@@ -16,7 +16,6 @@ public class Hangman extends ConsoleProgram {
 	private static final int BODY_PARTS = 8;
 	
     public void run() {
-    	boolean 
     	for (int i = 0; i < str.length(); i++) {
     		display += "_";
     	}
