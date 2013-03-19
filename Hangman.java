@@ -21,7 +21,7 @@ public class Hangman extends ConsoleProgram {
     	}  	
     	println("Welcome to Hangman!");
     	while (remGuess > 0){
-	    	println("The word now looks like this: " + );
+	    	println("The word now looks like this: " + display);
 	    	println("You have " + remGuess + " guess left.");
 	    	char guess = readLetter("Your guess: ");
 	    	boolean correct = false;
@@ -86,5 +86,6 @@ public class Hangman extends ConsoleProgram {
     private String str = HangmanLexicon.getWord(index);
     private int wordLength = str.length();
 	private char[] currentStr = new char[wordLength];
+	private String display;
     
 }
