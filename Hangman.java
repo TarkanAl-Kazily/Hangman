@@ -62,6 +62,9 @@ public class Hangman extends ConsoleProgram {
     		}
     		println("That is not a letter.");
     	}
+    	if (!isCapital(ch)) {
+    		
+    	}
     }
     
     private char readChar(String display) {
