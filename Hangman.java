@@ -34,10 +34,11 @@ public class Hangman extends ConsoleProgram {
 	    	legitimateGuess = false;
 	    	while (!legitimateGuess) {
 		    	guess = readLetter("Your guess: ");
+		    	legitimateGuess = true;
 		    	for (char letter : currentStr) {
 		    		if (letter == guess) {
 		    			println("You have already guessed that letter.");
-		    			
+		    			legitimateGuess = false;
 		    			break;
 		    		}
 		    	}
