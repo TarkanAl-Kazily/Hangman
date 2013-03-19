@@ -16,7 +16,7 @@ public class Hangman extends ConsoleProgram {
 	private static final int BODY_PARTS = 8;
 	
     public void run() {
-    	for (int i = 0; i < currentStr.length; i++) {
+    	for (int i = 0; i < wordLength; i++) {
     		currentStr[i] = "-";
     	}  	
     	println("Welcome to Hangman!");
@@ -26,7 +26,7 @@ public class Hangman extends ConsoleProgram {
 	    	char guess = readLetter("Your guess: ");
 	    	boolean correct = false;
 	    	//Use array to store chars that have been successfully guessed, and dashes in places that havent.
-	    	for (int i = 0; i < str.length(); i++) {
+	    	for (int i = 0; i < wordLength; i++) {
 	    		if (guess == str.charAt(i)) {
 	    			
 	    			correct = true;
