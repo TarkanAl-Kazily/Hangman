@@ -30,7 +30,7 @@ public class Hangman extends ConsoleProgram {
     		}
 	    	println("The word now looks like this: " + display);
 	    	println("You have " + remGuess + " guess left.");
-	    	
+	    	guess = createGuess();
 	    	correct = false;
 	    	for (int i = 0; i < wordLength; i++) {
 	    		if (guess == str.charAt(i)) {
