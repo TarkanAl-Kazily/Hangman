@@ -35,7 +35,8 @@ public class Hangman extends ConsoleProgram {
 		    	guess = readLetter("Your guess: ");
 		    	for (char letter : currentStr) {
 		    		if (letter == guess) {
-		    			println
+		    			println("You have already guessed that letter.");
+		    			break;
 		    		}
 		    	}
 	    	}
