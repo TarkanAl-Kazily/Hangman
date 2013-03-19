@@ -22,6 +22,10 @@ public class Hangman extends ConsoleProgram {
     	}
     	println("Welcome to Hangman!");
     	while (remGuess < 0){
+	    	if (display.equals(str)) {
+	    		victory = true;
+	    		break;
+	    	}
 	    	println("The word now looks like this: " + display);
 	    	println("You have " + remGuess + " left.");
 	    	char guess = readChar("Your guess: ");
@@ -34,17 +38,18 @@ public class Hangman extends ConsoleProgram {
 	    			display += "_";
 	    		}
 	    	}
-	    	if (!correct) {
+	    	if (correct) {
+	    		println("That guess is correct.");
+	    	} else {
 	    		remGuess--;
-	    		println("")
+	    		println("There are no " + char + "'s in the word.")
 	    	}
-	    	if (display.equals(str)) {
-	    		victory = true;
-	    		break;
-	    	}
+	    	
     	}
     	if (!victory) {
     		println("You're completely hung.\nThe word was: " + str + "\nYou lose.");
+    	} else {
+    		println("You guessed the word: " + str + "\nYou win.");
     	}
 	}
     
