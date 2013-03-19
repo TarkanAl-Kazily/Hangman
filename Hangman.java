@@ -17,7 +17,7 @@ public class Hangman extends ConsoleProgram {
 	
     public void run() {
     	for (int i = 0; i < str.length(); i++) {
-    		display += "_";
+    		display += "";
     	}
     	println("Welcome to Hangman!");
     	while (remGuess > 0){
@@ -34,7 +34,7 @@ public class Hangman extends ConsoleProgram {
 	    			display += guess;
 	    			correct = true;
 	    		} else {
-	    			display += "_";
+	    			display += "-";
 	    		}
 	    	}
 	    	if (correct) {
