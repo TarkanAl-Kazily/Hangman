@@ -33,7 +33,7 @@ public class HangmanCanvas extends GCanvas {
  * guesses that appears at the bottom of the window.
  */
 	public void noteIncorrectGuess(char letter) {
-		/* You fill this in */
+		wrongGuess.add(letter);
 	}
 
 /* Constants for the simple version of the picture (in pixels) */
