@@ -13,6 +13,7 @@ public class HangmanCanvas extends GCanvas {
 		((GCompound) scaffold).add(vScaffold);
 		((GCompound) scaffold).add(beam);
 		((GCompound) scaffold).add(rope);
+		add(scaffold);
 	}
 
 /**
