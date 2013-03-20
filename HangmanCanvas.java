@@ -38,7 +38,15 @@ public class HangmanCanvas extends GCanvas {
 		for (char ch: wrongGuesses) {
 			wrongGuessesStr += ch;
 		}
-		
+		switch (wrongGuesses.size()) {
+			case 1: {
+				add(head);
+				break;
+			} case 2: {
+				add(body);
+				break;
+			}
+		}
 	}
 
 /* Constants for the simple version of the picture (in pixels) */
