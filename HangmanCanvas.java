@@ -38,6 +38,7 @@ public class HangmanCanvas extends GCanvas {
 		for (char ch: wrongGuesses) {
 			wrongGuessesStr += ch;
 		}
+		
 	}
 
 /* Constants for the simple version of the picture (in pixels) */
@@ -59,4 +60,6 @@ public class HangmanCanvas extends GCanvas {
 	private GObject scaffold = new GCompound();
 	private List<Character> wrongGuesses = new ArrayList<Character>();
 	private String wrongGuessesStr;
+	private GObject head = new GOval(((BEAM_LENGTH + 40) - HEAD_RADIUS), (ROPE_LENGTH + 40), (2 * HEAD_RADIUS), (2 * HEAD_RADIUS));
+	private GObject 
 }
