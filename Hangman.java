@@ -21,6 +21,7 @@ public class Hangman extends ConsoleProgram {
     }
 	
 	public void run() {
+		canvas.reset();
     	boolean correct;
     	char guess;
     	for (int i = 0; i < wordLength; i++) {
