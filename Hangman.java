@@ -48,6 +48,7 @@ public class Hangman extends ConsoleProgram {
 	    		println("That guess is correct.");
 	    	} else {
 	    		remGuess--;
+	    		canvas.noteIncorrectGuess(guess);
 	    		println("There are no " + guess + "'s in the word.");
     		}
 	    }
