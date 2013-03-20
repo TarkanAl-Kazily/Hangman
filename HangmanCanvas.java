@@ -34,8 +34,9 @@ public class HangmanCanvas extends GCanvas {
  */
 	public void noteIncorrectGuess(char letter) {
 		wrongGuesses.add(letter);
+		wrongGuessesStr = "";
 		for (char ch: wrongGuesses) {
-			
+			wrongGuessesStr += ch;
 		}
 	}
 
