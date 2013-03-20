@@ -10,7 +10,7 @@ public class HangmanCanvas extends GCanvas {
 
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
-		/* You fill this in */
+		
 	}
 
 /**
@@ -45,4 +45,8 @@ public class HangmanCanvas extends GCanvas {
 	private static final int LEG_LENGTH = 108;
 	private static final int FOOT_LENGTH = 28;
 
+	private GObject vScaffold = new GLine(40, (SCAFFOLD_HEIGHT + 40), 40, 40);
+	private GObject hScaffold = new GLine(40, 40, (BEAM_LENGTH + 40), 40);
+	private GObject rope = new GLine((BEAM_LENGTH + 40), 40, (BEAM_LENGTH + 40), (ROPE_LENGTH + 40));
+	
 }
