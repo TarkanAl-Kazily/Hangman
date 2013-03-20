@@ -15,7 +15,12 @@ public class Hangman extends ConsoleProgram {
 	
 	private static final int BODY_PARTS = 8;
 	
-    public void run() {
+    public void init() {
+    	canvas = new HangmanCanvas();
+    	add(canvas);
+    }
+	
+	public void run() {
     	boolean correct;
     	char guess;
     	for (int i = 0; i < wordLength; i++) {
@@ -120,5 +125,6 @@ public class Hangman extends ConsoleProgram {
 	private char[] currentStr = new char[wordLength];
 	private String display;
 	private java.util.List<Character> guessed = new ArrayList<Character>();
+	private HangmanCanvas canvas;
     
 }
