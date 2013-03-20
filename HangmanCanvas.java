@@ -61,5 +61,5 @@ public class HangmanCanvas extends GCanvas {
 	private List<Character> wrongGuesses = new ArrayList<Character>();
 	private String wrongGuessesStr;
 	private GObject head = new GOval(((BEAM_LENGTH + 40) - HEAD_RADIUS), (ROPE_LENGTH + 40), (2 * HEAD_RADIUS), (2 * HEAD_RADIUS));
-	private GObject 
+	private GObject body = new GLine((BEAM_LENGTH + 40), ((ROPE_LENGTH + 40) - (2 * HEAD_RADIUS)), (BEAM_LENGTH + 40), (((ROPE_LENGTH + 40) - (2 * HEAD_RADIUS)) + BODY_LENGTH));
 }
