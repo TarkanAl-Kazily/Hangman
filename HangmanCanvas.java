@@ -34,6 +34,9 @@ public class HangmanCanvas extends GCanvas {
  */
 	public void noteIncorrectGuess(char letter) {
 		wrongGuesses.add(letter);
+		for (char ch: wrongGuesses) {
+			
+		}
 	}
 
 /* Constants for the simple version of the picture (in pixels) */
@@ -54,5 +57,5 @@ public class HangmanCanvas extends GCanvas {
 	private GObject rope = new GLine((BEAM_LENGTH + 40), 40, (BEAM_LENGTH + 40), (ROPE_LENGTH + 40));
 	private GObject scaffold = new GCompound();
 	private List<Character> wrongGuesses = new ArrayList<Character>();
-	
+	private String wrongGuessesStr;
 }
