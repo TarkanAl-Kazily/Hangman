@@ -14,7 +14,7 @@ public class HangmanLexicon {
 
 	public static void setup() {
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("HangmanLexicon.txt"));
+			BufferedReader br = new BufferedReader(new FileReader("/Users/tarkan/Desktop/Assignment4/HangmanLexicon.txt"));
 			String word = br.readLine();
 			while (word != null) {
 				words.add(word);
