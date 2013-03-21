@@ -11,6 +11,17 @@ import java.io.*;
 
 public class HangmanLexicon {
 
+	public static setup() {
+		try {
+			private BufferedReader br = new BufferedReader(new FileReader("HangmanLexicon.txt"));
+			
+			
+			
+			
+		}
+		
+	}
+	
 /** Returns the number of words in the lexicon. */
 	public static int getWordCount() {
 		return 10;
@@ -18,18 +29,6 @@ public class HangmanLexicon {
 
 /** Returns the word at the specified index. */
 	public static String getWord(int index) {
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		
@@ -53,7 +52,6 @@ public class HangmanLexicon {
 	}
 	
 	
-	private BufferedReader bf = new BufferedReader(new FileReader("HangmanLexicon.txt"));
 	private List<String> words = new ArrayList<String>();
 	
 }
