@@ -11,9 +11,6 @@ public class HangmanCanvas extends GCanvas {
 
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
-		((GCompound) scaffold).add(vScaffold);
-		((GCompound) scaffold).add(beam);
-		((GCompound) scaffold).add(rope);
 		add(scaffold);
 	}
 
@@ -69,7 +66,11 @@ public class HangmanCanvas extends GCanvas {
 	private GObject vScaffold = new GLine(OFFSET, (SCAFFOLD_HEIGHT + OFFSET), OFFSET, OFFSET);
 	private GObject beam = new GLine(OFFSET, OFFSET, (BEAM_LENGTH + OFFSET), OFFSET);
 	private GObject rope = new GLine((BEAM_LENGTH + OFFSET), OFFSET, (BEAM_LENGTH + OFFSET), (ROPE_LENGTH + OFFSET));
-	private GObject scaffold = new GCompound();
+	private GObject scaffold = new GCompound(); {
+		((GCompound) scaffold).add(vScaffold);
+		((GCompound) scaffold).add(beam);
+		((GCompound) scaffold).add(rope);
+	}
 	
 	private GObject head = new GOval(((BEAM_LENGTH + OFFSET) - HEAD_RADIUS), (ROPE_LENGTH + OFFSET), (2 * HEAD_RADIUS), (2 * HEAD_RADIUS));
 	private GObject body = new GLine((BEAM_LENGTH + OFFSET), ((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)), (BEAM_LENGTH + OFFSET), (((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH));
