@@ -40,8 +40,8 @@ public class HangmanCanvas extends GCanvas {
 			wrongGuessesStr += ch;
 		}
 		remove(wrongGuessesLbl);
-		wrongGuessesLbl = new GLabel(wrongGuessesStr);
-		add(wrongGuessesLbl, OFFSET, (((((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH) + (3 * OFFSET)));
+		wrongGuessesLbl = new GLabel(wrongGuessesStr, OFFSET, (((((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH) + (3 * OFFSET)));
+		add(wrongGuessesLbl);
 		switch (wrongGuesses.size()) {
 			case 1: {
 				add(head);
