@@ -17,6 +17,7 @@ public class HangmanLexicon {
 			while (br.readLine().equals(null)) {
 				words.add(br.readLine());
 			}
+			br.close();
 		} Finally: br.close();
 		
 	}
