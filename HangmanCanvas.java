@@ -50,19 +50,20 @@ public class HangmanCanvas extends GCanvas {
 				add(rightArm);
 				break;
 			} case 5: {
-				add();
+				add(leftLeg);
 				break:
 			} case 6: {
-				add()
+				add(rightLeg);
 				break;
 			} case 7: {
-				add();
+				add(leftFoot);
 				break;
 			} case 8: {
-				add();
+				add(rightFoot);
 				break;
 			}
 		}
+		
 	}
 
 /* Constants for the simple version of the picture (in pixels) */
