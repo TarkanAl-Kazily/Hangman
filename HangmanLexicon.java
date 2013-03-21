@@ -19,6 +19,7 @@ public class HangmanLexicon {
 			while (word != null) {
 				words.add(word);
 				word = br.readLine();
+				println(word + " ");
 			}
 			br.close();
 		} catch (IOException e) {}
