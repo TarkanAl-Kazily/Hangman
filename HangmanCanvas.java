@@ -14,6 +14,7 @@ public class HangmanCanvas extends GCanvas {
 	public void reset() {
 		removeAll();
 		add(scaffold);
+		wordLbl = new GLabel("", 0, 0);
 	}
 
 /**
@@ -22,6 +23,7 @@ public class HangmanCanvas extends GCanvas {
  * been guessed so far; unguessed letters are indicated by hyphens.
  */
 	public void displayWord(String word) {
+		remove(wordLbl);
 		wordLbl = new GLabel(word, OFFSET, (((((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH) + (2.5 * OFFSET)));
 		add(wordLbl);
 	}
