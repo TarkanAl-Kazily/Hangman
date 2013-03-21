@@ -19,9 +19,7 @@ public class HangmanLexicon {
 				words.add(br.readLine());
 			}
 			br.close();
-		} catch (IOException e) {
-			println("An error occurred" + e);
-		}
+		} catch (IOException e);
 		
 	}
 	
