@@ -38,7 +38,7 @@ public class HangmanCanvas extends GCanvas {
 			wrongGuessesStr += ch;
 		}
 		wrongGuessesLbl = new GLabel(wrongGuessesStr);
-		add(wrongGuessesLbl, OFFSET, ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH));
+		add(wrongGuessesLbl, OFFSET, ((((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH));
 		switch (wrongGuesses.size()) {
 			case 1: {
 				add(head);
@@ -94,10 +94,10 @@ public class HangmanCanvas extends GCanvas {
 	private GObject head = new GOval(((BEAM_LENGTH + OFFSET) - HEAD_RADIUS), (ROPE_LENGTH + OFFSET), (2 * HEAD_RADIUS), (2 * HEAD_RADIUS));
 	private GObject body = new GLine((BEAM_LENGTH + OFFSET), ((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)), (BEAM_LENGTH + OFFSET), (((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH));
 	
-	private GObject leftUpperArm = new GLine((BEAM_LENGTH + OFFSET), (((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD), ((BEAM_LENGTH + OFFSET) - UPPER_ARM_LENGTH) ,(((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD));
-	private GObject rightUpperArm = new GLine((BEAM_LENGTH + OFFSET), (((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD), ((BEAM_LENGTH + OFFSET) + UPPER_ARM_LENGTH) ,(((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD));
-	private GObject leftLowerArm = new GLine(((BEAM_LENGTH + OFFSET) - UPPER_ARM_LENGTH), (((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD), ((BEAM_LENGTH + OFFSET) - UPPER_ARM_LENGTH), ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD) + LOWER_ARM_LENGTH));
-	private GObject rightLowerArm = new GLine(((BEAM_LENGTH + OFFSET) + UPPER_ARM_LENGTH), (((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD), ((BEAM_LENGTH + OFFSET) - UPPER_ARM_LENGTH), ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD) + LOWER_ARM_LENGTH));
+	private GObject leftUpperArm = new GLine((BEAM_LENGTH + OFFSET), (((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD), ((BEAM_LENGTH + OFFSET) - UPPER_ARM_LENGTH) ,(((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD));
+	private GObject rightUpperArm = new GLine((BEAM_LENGTH + OFFSET), (((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD), ((BEAM_LENGTH + OFFSET) + UPPER_ARM_LENGTH) ,(((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD));
+	private GObject leftLowerArm = new GLine(((BEAM_LENGTH + OFFSET) - UPPER_ARM_LENGTH), (((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD), ((BEAM_LENGTH + OFFSET) - UPPER_ARM_LENGTH), ((((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD) + LOWER_ARM_LENGTH));
+	private GObject rightLowerArm = new GLine(((BEAM_LENGTH + OFFSET) + UPPER_ARM_LENGTH), (((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD), ((BEAM_LENGTH + OFFSET) - UPPER_ARM_LENGTH), ((((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD) + LOWER_ARM_LENGTH));
 	private GObject leftArm = new GCompound(); {
 		((GCompound) leftArm).add(leftUpperArm);
 		((GCompound) leftArm).add(leftLowerArm);
@@ -106,10 +106,10 @@ public class HangmanCanvas extends GCanvas {
 		((GCompound) rightArm).add(rightLowerArm);
 	}
 	
-	private GObject upperLeftLeg = new GLine((BEAM_LENGTH + OFFSET), (((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH), ((BEAM_LENGTH + OFFSET) - HIP_WIDTH), (((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH));
-	private GObject upperRightLeg = new GLine((BEAM_LENGTH + OFFSET), (((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH), ((BEAM_LENGTH + OFFSET) + HIP_WIDTH), (((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH));
-	private GObject lowerLeftLeg = new GLine(((BEAM_LENGTH + OFFSET) - HIP_WIDTH), (((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH), ((BEAM_LENGTH + OFFSET) - HIP_WIDTH), ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH));
-	private GObject lowerRightLeg = new GLine(((BEAM_LENGTH + OFFSET) + HIP_WIDTH), (((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH), ((BEAM_LENGTH + OFFSET) + HIP_WIDTH), ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH));
+	private GObject upperLeftLeg = new GLine((BEAM_LENGTH + OFFSET), (((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH), ((BEAM_LENGTH + OFFSET) - HIP_WIDTH), (((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH));
+	private GObject upperRightLeg = new GLine((BEAM_LENGTH + OFFSET), (((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH), ((BEAM_LENGTH + OFFSET) + HIP_WIDTH), (((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH));
+	private GObject lowerLeftLeg = new GLine(((BEAM_LENGTH + OFFSET) - HIP_WIDTH), (((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH), ((BEAM_LENGTH + OFFSET) - HIP_WIDTH), ((((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH));
+	private GObject lowerRightLeg = new GLine(((BEAM_LENGTH + OFFSET) + HIP_WIDTH), (((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH), ((BEAM_LENGTH + OFFSET) + HIP_WIDTH), ((((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH));
 	private GObject leftLeg = new GCompound(); {
 		((GCompound) leftLeg).add(upperLeftLeg);
 		((GCompound) leftLeg).add(lowerLeftLeg);
@@ -118,8 +118,8 @@ public class HangmanCanvas extends GCanvas {
 		((GCompound) rightLeg).add(lowerRightLeg);
 	}
 	
-	private GObject leftFoot = new GLine(((BEAM_LENGTH + OFFSET) - HIP_WIDTH), ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH), (((BEAM_LENGTH + OFFSET) - HIP_WIDTH) - FOOT_LENGTH), ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH));
-	private GObject rightFoot = new GLine(((BEAM_LENGTH + OFFSET) + HIP_WIDTH), ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH), (((BEAM_LENGTH + OFFSET) + HIP_WIDTH) + FOOT_LENGTH), ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH));
+	private GObject leftFoot = new GLine(((BEAM_LENGTH + OFFSET) - HIP_WIDTH), ((((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH), (((BEAM_LENGTH + OFFSET) - HIP_WIDTH) - FOOT_LENGTH), ((((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH));
+	private GObject rightFoot = new GLine(((BEAM_LENGTH + OFFSET) + HIP_WIDTH), ((((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH), (((BEAM_LENGTH + OFFSET) + HIP_WIDTH) + FOOT_LENGTH), ((((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH));
 	
 	private List<Character> wrongGuesses = new ArrayList<Character>();
 	private String wrongGuessesStr;
