@@ -44,7 +44,8 @@ public class Hangman extends ConsoleProgram {
 	    			correct = true;
 	    		}
 	    	}
-    		if (correct) {
+    		createDisplay(currentStr);
+	    	if (correct) {
 	    		canvas.displayWord(display);
     			println("That guess is correct.");
 	    	} else {
