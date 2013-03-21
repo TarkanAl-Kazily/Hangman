@@ -6,6 +6,7 @@
  */
 
 import acm.util.*;
+import java.util.*;
 
 public class HangmanLexicon {
 
