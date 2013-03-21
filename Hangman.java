@@ -20,6 +20,7 @@ public class Hangman extends ConsoleProgram {
     	add(canvas);
     	HangmanLexicon.setup();
     	str = HangmanLexicon.getWord(index);
+    	wordlength =  = str.length();
     }
 	
 	public void run() {
@@ -127,7 +128,7 @@ public class Hangman extends ConsoleProgram {
     private int remGuess = BODY_PARTS;
     private int index = (int) (Math.random() * HangmanLexicon.getWordCount());
     private String str;
-    private int wordLength = str.length();
+    private int wordLength;
 	private char[] currentStr = new char[wordLength];
 	private String display;
 	private java.util.List<Character> guessed = new ArrayList<Character>();
