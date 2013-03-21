@@ -53,6 +53,6 @@ public class HangmanLexicon {
 	}
 	
 	
-	private List<String> words = new ArrayList<String>();
+	private static List<String> words = new ArrayList<String>();
 	
 }
