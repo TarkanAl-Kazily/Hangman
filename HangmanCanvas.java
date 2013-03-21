@@ -117,7 +117,7 @@ public class HangmanCanvas extends GCanvas {
 		((GCompound) rightLeg).add(lowerRightLeg);
 	}
 	
-	private GObject leftFoot = new GLine(((BEAM_LENGTH + OFFSET) - HIP_WIDTH), ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH), (((BEAM_LENGTH + OFFSET) - HIP_WIDTH) - FOOT_LENGTH), ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH))
+	private GObject leftFoot = new GLine(((BEAM_LENGTH + OFFSET) - HIP_WIDTH), ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH), (((BEAM_LENGTH + OFFSET) - HIP_WIDTH) - FOOT_LENGTH), ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH));
 	
 	private List<Character> wrongGuesses = new ArrayList<Character>();
 	private String wrongGuessesStr;
