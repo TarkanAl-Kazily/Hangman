@@ -19,6 +19,7 @@ public class Hangman extends ConsoleProgram {
     	canvas = new HangmanCanvas();
     	add(canvas);
     	HangmanLexicon.setup();
+    	str = HangmanLexicon.getWord(index);
     }
 	
 	public void run() {
