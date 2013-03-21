@@ -27,7 +27,7 @@ public class HangmanLexicon {
 			word = br.readLine();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			System.out.println("readLine exception")
+			System.out.println("readLine exception");
 			e.printStackTrace();
 		}
 		while (word != null) {
