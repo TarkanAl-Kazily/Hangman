@@ -76,8 +76,10 @@ public class HangmanCanvas extends GCanvas {
 	private GObject rightUpperArm = new GLine((BEAM_LENGTH + OFFSET), (((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD), ((BEAM_LENGTH + OFFSET) + UPPER_ARM_LENGTH) ,(((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD));
 	private GObject leftLowerArm = new GLine(((BEAM_LENGTH + OFFSET) - UPPER_ARM_LENGTH), (((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD), ((BEAM_LENGTH + OFFSET) - UPPER_ARM_LENGTH), ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD) + LOWER_ARM_LENGTH));
 	private GObject rightLowerArm = new GLine(((BEAM_LENGTH + OFFSET) + UPPER_ARM_LENGTH), (((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD), ((BEAM_LENGTH + OFFSET) - UPPER_ARM_LENGTH), ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + ARM_OFFSET_FROM_HEAD) + LOWER_ARM_LENGTH));
-	private GObject leftArm = new GCompound();
+	private GObject leftArm = new GCompound(); {
 	((GCompound) leftArm).add(leftUpperArm);
+	((GCompound) leftArm).add(leftLowerArm);
+	}
 	
 	private List<Character> wrongGuesses = new ArrayList<Character>();
 	private String wrongGuessesStr;
