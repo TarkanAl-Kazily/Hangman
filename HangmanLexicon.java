@@ -13,7 +13,7 @@ import java.lang.*;
 public class HangmanLexicon {
 
 	public static void setup() {
-		FileReader fp;
+		FileReader fp=null;
 		System.out.println("opening file...");
 		try {
 			fp = new FileReader("ShorterLexicon.txt");
@@ -22,7 +22,14 @@ public class HangmanLexicon {
 			System.out.println("file not found!" + e);
 		}
 		BufferedReader br = new BufferedReader(fp);
-		String word = br.readLine();
+		String word;
+		try {
+			word = br.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("readLine exception")
+			e.printStackTrace();
+		}
 		while (word != null) {
 			words.add(word);
 			word = br.readLine();
