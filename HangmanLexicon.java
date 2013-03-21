@@ -13,7 +13,7 @@ public class HangmanLexicon {
 
 	public static setup() {
 		try {
-			private BufferedReader br = new BufferedReader(new FileReader("HangmanLexicon.txt"));
+			BufferedReader br = new BufferedReader(new FileReader("HangmanLexicon.txt"));
 			
 			
 			
