@@ -21,16 +21,14 @@ public class HangmanLexicon {
 		catch (FileNotFoundException e) {
 			System.out.println("file not found!" + e);
 		}
-			BufferedReader br = new BufferedReader(fp);
-			String word = br.readLine();
-			while (word != null) {
-				words.add(word);
-				word = br.readLine();
-				System.out.println(word);
-			}
-			br.close();
-		} catch (IOException e) {}
-		
+		BufferedReader br = new BufferedReader(fp);
+		String word = br.readLine();
+		while (word != null) {
+			words.add(word);
+			word = br.readLine();
+			System.out.println(word);
+		}
+		br.close();		
 	}
 	
 /** Returns the number of words in the lexicon. */
