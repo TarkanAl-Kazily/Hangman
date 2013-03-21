@@ -65,6 +65,9 @@ public class HangmanCanvas extends GCanvas {
 			}
 		}
 		
+		
+		
+		
 	}
 
 /* Constants for the simple version of the picture (in pixels) */
@@ -123,6 +126,7 @@ public class HangmanCanvas extends GCanvas {
 	
 	private List<Character> wrongGuesses = new ArrayList<Character>();
 	private String wrongGuessesStr;
+	private GObject wrongGuessesLbl;
 
 
 
