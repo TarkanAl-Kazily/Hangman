@@ -17,7 +17,8 @@ public class HangmanLexicon {
 			BufferedReader br = new BufferedReader(new FileReader("HangmanLexicon.txt"));
 			String word = br.readLine();
 			while (word != null) {
-				words.add(br.readLine());
+				words.add(word);
+				word = br.readLine();
 			}
 			br.close();
 		} catch (IOException e) {}
