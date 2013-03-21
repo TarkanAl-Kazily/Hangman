@@ -45,6 +45,18 @@ public class HangmanCanvas extends GCanvas {
 			} case 3: {
 				add(leftArm);
 				break;
+			} case 4: {
+				add(rigthArm);
+				break:
+			} case 5: {
+				add();
+				break:
+			} case 6: {
+				add()
+				break;
+			} case 7: {
+				add();
+				break;
 			}
 		}
 	}
