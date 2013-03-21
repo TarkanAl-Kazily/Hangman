@@ -124,12 +124,4 @@ public class HangmanCanvas extends GCanvas {
 	private List<Character> wrongGuesses = new ArrayList<Character>();
 	private String wrongGuessesStr = "";
 	private GObject wrongGuessesLbl;
-
-
-
-
-
-
-
-
 }
