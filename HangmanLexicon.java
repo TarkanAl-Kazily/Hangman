@@ -32,10 +32,20 @@ public class HangmanLexicon {
 		}
 		while (word != null) {
 			words.add(word);
-			word = br.readLine();
+			try {
+				word = br.readLine();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			System.out.println(word);
 		}
-		br.close();		
+		try {
+			br.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
 	}
 	
 /** Returns the number of words in the lexicon. */
