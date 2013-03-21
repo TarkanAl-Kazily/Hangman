@@ -12,7 +12,7 @@ import java.lang.*;
 
 public class HangmanLexicon {
 
-	public static setup() {
+	public static void setup() {
 		try {
 			BufferedReader br = new BufferedReader(new FileReader("HangmanLexicon.txt"));
 			String word = br.readLine();
