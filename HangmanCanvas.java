@@ -14,6 +14,7 @@ public class HangmanCanvas extends GCanvas {
 	public void reset() {
 		removeAll();
 		add(scaffold);
+		add(wrongGuessesLbl, OFFSET, ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH));
 	}
 
 /**
@@ -38,7 +39,6 @@ public class HangmanCanvas extends GCanvas {
 			wrongGuessesStr += ch;
 		}
 		wrongGuessesLbl = new GLabel(wrongGuessesStr);
-		add(wrongGuessesLbl, OFFSET, ((((ROPE_LENGTH + OFFSET) - (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH));
 		switch (wrongGuesses.size()) {
 			case 1: {
 				add(head);
@@ -66,10 +66,6 @@ public class HangmanCanvas extends GCanvas {
 				break;
 			}
 		}
-		
-		
-		
-		
 	}
 
 /* Constants for the simple version of the picture (in pixels) */
