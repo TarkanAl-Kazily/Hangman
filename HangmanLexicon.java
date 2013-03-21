@@ -22,7 +22,7 @@ public class HangmanLexicon {
 			System.out.println("file not found!" + e);
 		}
 		BufferedReader br = new BufferedReader(fp);
-		String word;
+		String word="";
 		try {
 			word = br.readLine();
 		} catch (IOException e) {
