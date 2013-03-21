@@ -20,7 +20,7 @@ public class Hangman extends ConsoleProgram {
     	add(canvas);
     	HangmanLexicon.setup();
     	str = HangmanLexicon.getWord(index);
-    	wordlength =  = str.length();
+    	wordlength = str.length();
     }
 	
 	public void run() {
