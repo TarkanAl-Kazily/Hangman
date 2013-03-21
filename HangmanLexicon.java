@@ -27,7 +27,7 @@ public class HangmanLexicon {
 	
 /** Returns the number of words in the lexicon. */
 	public static int getWordCount() {
-		return 10;
+		return words.size();
 	}
 
 /** Returns the word at the specified index. */
