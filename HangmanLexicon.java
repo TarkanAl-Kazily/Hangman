@@ -17,8 +17,8 @@ public class HangmanLexicon {
 		try {
 			fp = new FileReader("ShorterLexicon.txt");
 		}
-		catch (FileNotFoundException) {
-			System.out.println("file not found!");
+		catch (FileNotFoundException e) {
+			System.out.println("file not found!" + e);
 		}
 			BufferedReader br = new BufferedReader(fp);
 			String word = br.readLine();
