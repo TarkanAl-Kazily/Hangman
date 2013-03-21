@@ -16,7 +16,7 @@ public class HangmanLexicon {
 			BufferedReader br = new BufferedReader(new FileReader("HangmanLexicon.txt"));
 			while (br.readLine().equals(null)) {
 				words.add(br.readLine());
-			
+			}
 			
 			
 		}
