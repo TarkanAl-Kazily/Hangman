@@ -14,7 +14,7 @@ public class HangmanLexicon {
 		return 10;
 	}
 
-/** Returns the word at the specified index. */
+///** Returns the word at the specified index. */
 	public static String getWord(int index) {
 		switch (index) {
 			case 0: return "BUOY";
@@ -29,5 +29,5 @@ public class HangmanLexicon {
 			case 9: return "ZIRCON";
 			default: throw new ErrorException("getWord: Illegal index");
 		}
-	};
+	}
 }
