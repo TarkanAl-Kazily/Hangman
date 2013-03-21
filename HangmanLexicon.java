@@ -13,8 +13,14 @@ import java.lang.*;
 public class HangmanLexicon {
 
 	public static void setup() {
+		FileReader fp;
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("ShorterLexicon.txt"));
+			fp = new FileReader("ShorterLexicon.txt");
+		}
+		catch (FileNotFoundException) {
+			System.out.println("file not found!");
+		}
+			BufferedReader br = new BufferedReader(fp);
 			String word = br.readLine();
 			while (word != null) {
 				words.add(word);
