@@ -57,7 +57,10 @@ public class HangmanCanvas extends GCanvas {
 			} case 7: {
 				add();
 				break;
-			}
+			} case 8: {
+				add();
+				break;
+			} default: throw new ErrorException("impossible size: should have lost");
 		}
 	}
 
