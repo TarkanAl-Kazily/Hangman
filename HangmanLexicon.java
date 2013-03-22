@@ -14,7 +14,6 @@ public class HangmanLexicon {
 
 	public static void setup() {
 		FileReader fp=null;
-		System.out.println("opening file...");
 		try {
 			fp = new FileReader("HangmanLexicon.txt");
 		}
