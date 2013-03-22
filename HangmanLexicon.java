@@ -38,7 +38,6 @@ public class HangmanLexicon {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println(word);
 		}
 		try {
 			br.close();
