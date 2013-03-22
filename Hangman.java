@@ -127,7 +127,7 @@ public class Hangman extends ConsoleProgram {
     
     private boolean victory = false;
     private int remGuess = BODY_PARTS;
-    private int index = (int) (Math.random() * HangmanLexicon.getWordCount());
+    private int index;
     private String str;
     private int wordLength;
 	private char[] currentStr;
