@@ -27,6 +27,7 @@ public class Hangman extends ConsoleProgram {
 		canvas.reset();
     	boolean correct;
     	char guess;
+    	currentStr  = new char[wordLength];
     	for (int i = 0; i < wordLength; i++) {
     		currentStr[i] = '-';
     	}  	
@@ -129,7 +130,7 @@ public class Hangman extends ConsoleProgram {
     private int index = (int) (Math.random() * HangmanLexicon.getWordCount());
     private String str;
     private int wordLength;
-	private char[] currentStr = new char[wordLength];
+	private char[] currentStr;
 	private String display;
 	private java.util.List<Character> guessed = new ArrayList<Character>();
 	private HangmanCanvas canvas;
