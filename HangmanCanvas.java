@@ -23,7 +23,7 @@ public class HangmanCanvas extends GCanvas {
  */
 	public void displayWord(String word) {
 		remove(wordLbl);
-		wordLbl = new GLabel(word, OFFSET, (((((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH) + (2.5 * OFFSET)));
+		wordLbl = new GLabel(word, OFFSET, (((((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH) + (1.5 * OFFSET)));
 		add(wordLbl);
 	}
 
@@ -40,7 +40,7 @@ public class HangmanCanvas extends GCanvas {
 			wrongGuessesStr += ch;
 		}
 		remove(wrongGuessesLbl);
-		wrongGuessesLbl = new GLabel(wrongGuessesStr, OFFSET, (((((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH) + (3 * OFFSET)));
+		wrongGuessesLbl = new GLabel(wrongGuessesStr, OFFSET, (((((ROPE_LENGTH + OFFSET) + (2 * HEAD_RADIUS)) + BODY_LENGTH) + LEG_LENGTH) + (2 * OFFSET)));
 		add(wrongGuessesLbl);
 		switch (wrongGuesses.size()) {
 			case 1: {
