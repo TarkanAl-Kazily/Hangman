@@ -5,10 +5,8 @@
  * class that you will reimplement for Part III of the assignment.
  */
 
-import acm.util.*;
 import java.util.*;
 import java.io.*;
-import java.lang.*;
 
 public class HangmanLexicon {
 
